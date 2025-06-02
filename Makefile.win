@@ -1,0 +1,79 @@
+# Project: THE GAME UNIFAN
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe -D__DEBUG__
+CC       = gcc.exe -D__DEBUG__
+WINDRES  = windres.exe
+OBJ      = main.o roleta.o PARTIDAS/alexing.o PARTIDAS/bavi.o PARTIDAS/brasilxargentina.o PARTIDAS/flaxvas.o PARTIDAS/fluxbota.o PARTIDAS/franxesp.o PARTIDAS/interxmil.o PARTIDAS/porxhol.o PARTIDAS/psgxars.o PARTIDAS/sanxsao.o PARTIDAS/untxcity.o PARTIDAS/uruxita.o PARTIDAS/esportivas.o bayerxceltic.o corxpal.o realxbar.o
+LINKOBJ  = main.o roleta.o PARTIDAS/alexing.o PARTIDAS/bavi.o PARTIDAS/brasilxargentina.o PARTIDAS/flaxvas.o PARTIDAS/fluxbota.o PARTIDAS/franxesp.o PARTIDAS/interxmil.o PARTIDAS/porxhol.o PARTIDAS/psgxars.o PARTIDAS/sanxsao.o PARTIDAS/untxcity.o PARTIDAS/uruxita.o PARTIDAS/esportivas.o bayerxceltic.o corxpal.o realxbar.o
+LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc -g3
+INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = "TESTE DO JOGO.exe"
+CXXFLAGS = $(CXXINCS) -g3 -g
+CFLAGS   = $(INCS) -g3 -g
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CC) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+main.o: main.cpp
+	$(CC) -c main.cpp -o main.o $(CFLAGS)
+
+roleta.o: roleta.cpp
+	$(CC) -c roleta.cpp -o roleta.o $(CFLAGS)
+
+PARTIDAS/alexing.o: PARTIDAS/alexing.cpp
+	$(CC) -c PARTIDAS/alexing.cpp -o PARTIDAS/alexing.o $(CFLAGS)
+
+PARTIDAS/bavi.o: PARTIDAS/bavi.cpp
+	$(CC) -c PARTIDAS/bavi.cpp -o PARTIDAS/bavi.o $(CFLAGS)
+
+PARTIDAS/brasilxargentina.o: PARTIDAS/brasilxargentina.cpp
+	$(CC) -c PARTIDAS/brasilxargentina.cpp -o PARTIDAS/brasilxargentina.o $(CFLAGS)
+
+PARTIDAS/flaxvas.o: PARTIDAS/flaxvas.cpp
+	$(CC) -c PARTIDAS/flaxvas.cpp -o PARTIDAS/flaxvas.o $(CFLAGS)
+
+PARTIDAS/fluxbota.o: PARTIDAS/fluxbota.cpp
+	$(CC) -c PARTIDAS/fluxbota.cpp -o PARTIDAS/fluxbota.o $(CFLAGS)
+
+PARTIDAS/franxesp.o: PARTIDAS/franxesp.cpp
+	$(CC) -c PARTIDAS/franxesp.cpp -o PARTIDAS/franxesp.o $(CFLAGS)
+
+PARTIDAS/interxmil.o: PARTIDAS/interxmil.cpp
+	$(CC) -c PARTIDAS/interxmil.cpp -o PARTIDAS/interxmil.o $(CFLAGS)
+
+PARTIDAS/porxhol.o: PARTIDAS/porxhol.cpp
+	$(CC) -c PARTIDAS/porxhol.cpp -o PARTIDAS/porxhol.o $(CFLAGS)
+
+PARTIDAS/psgxars.o: PARTIDAS/psgxars.cpp
+	$(CC) -c PARTIDAS/psgxars.cpp -o PARTIDAS/psgxars.o $(CFLAGS)
+
+PARTIDAS/sanxsao.o: PARTIDAS/sanxsao.cpp
+	$(CC) -c PARTIDAS/sanxsao.cpp -o PARTIDAS/sanxsao.o $(CFLAGS)
+
+PARTIDAS/untxcity.o: PARTIDAS/untxcity.cpp
+	$(CC) -c PARTIDAS/untxcity.cpp -o PARTIDAS/untxcity.o $(CFLAGS)
+
+PARTIDAS/uruxita.o: PARTIDAS/uruxita.cpp
+	$(CC) -c PARTIDAS/uruxita.cpp -o PARTIDAS/uruxita.o $(CFLAGS)
+
+PARTIDAS/esportivas.o: PARTIDAS/esportivas.cpp
+	$(CC) -c PARTIDAS/esportivas.cpp -o PARTIDAS/esportivas.o $(CFLAGS)
+
+bayerxceltic.o: bayerxceltic.cpp
+	$(CC) -c bayerxceltic.cpp -o bayerxceltic.o $(CFLAGS)
+
+corxpal.o: corxpal.cpp
+	$(CC) -c corxpal.cpp -o corxpal.o $(CFLAGS)
+
+realxbar.o: realxbar.cpp
+	$(CC) -c realxbar.cpp -o realxbar.o $(CFLAGS)
